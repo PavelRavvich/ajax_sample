@@ -5,23 +5,23 @@
          version="3.1">
 
     <servlet>
-        <servlet-name>Servlet</servlet-name>
-        <servlet-class>ru.pravvich.Servlet</servlet-class>
+        <servlet-name>FormHandlerServlet</servlet-name>
+        <servlet-class>ru.pravvich.FormHandlerServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>Servlet</servlet-name>
+        <servlet-name>FormHandlerServlet</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
 
     <servlet>
-        <servlet-name>LocationServlet</servlet-name>
-        <servlet-class>ru.pravvich.LocationServlet</servlet-class>
+        <servlet-name>GetCitiesServlet</servlet-name>
+        <servlet-class>ru.pravvich.JsonCitiesServlet</servlet-class>
     </servlet>
-
     <servlet-mapping>
-        <servlet-name>LocationServlet</servlet-name>
-        <url-pattern>/location</url-pattern>
+        <servlet-name>GetCitiesServlet</servlet-name>
+        <url-pattern>/JsonServlet/*</url-pattern>
     </servlet-mapping>
+
 </web-app>

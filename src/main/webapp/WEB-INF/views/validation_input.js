@@ -17,14 +17,24 @@ $(function() {
 
                 password:  {
                     required: true,
-                    minlength: 5
+                    minlength: 6
+                },
+
+                country: {
+                    required: true
+                },
+
+                city: {
+                    required: true
                 }
             },
 
             messages: {
                 username: "Please enter your name, min 3 char",
                 login: "Please enter your login, min 5 char",
-                password: "Please enter your password, min 5 char"
+                password: "Please enter your password, min 6 char",
+                country: "Please select country from list",
+                city: "Please select city from list"
             },
 
             submitHandler: function(form) {

@@ -1,30 +1,42 @@
 package ru.pravvich;
 
-import java.nio.file.Path;
-
-import java.util.HashMap;
-import java.util.Map;
+import com.google.gson.GsonBuilder;
 
 public class User {
 
-    private Map<String, Path> files = new HashMap<>();
-
     private int id;
-    private String name;
+    private String username;
     private String login;
     private String password;
     private String country;
     private String city;
 
+    public User(final String username,
+                final String login,
+                final String password,
+                final String country,
+                final String city) {
 
-
-    public boolean deleteFile(final String name) {
-        files.put(name, null);
-        return true;
+        this.username = username;
+        this.login = login;
+        this.password = password;
+        this.country = country;
+        this.city = city;
     }
 
-    private boolean saveFile(final String name) {
-        return files.remove(name, null);
+    public User(final int id,
+                final String username,
+                final String login,
+                final String password,
+                final String country,
+                final String city) {
+
+        this.id = id;
+        this.username = username;
+        this.login = login;
+        this.password = password;
+        this.country = country;
+        this.city = city;
     }
 
     public int getId() {
@@ -35,12 +47,12 @@ public class User {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getLogin() {
@@ -73,5 +85,24 @@ public class User {
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public String getJSON() {
+        return new GsonBuilder()
+                .setPrettyPrinting()
+                .create()
+                .toJson(this, this.getClass());
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", login='" + login + '\'' +
+                ", password='" + password + '\'' +
+                ", country='" + country + '\'' +
+                ", city='" + city + '\'' +
+                '}';
     }
 }
