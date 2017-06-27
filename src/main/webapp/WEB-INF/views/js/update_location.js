@@ -5,8 +5,8 @@
 $(document).ready(function() {
     $('#country').change(function(event) {
         var country = $("select#country").val();
-        $.get('JsonServlet', {
-            sportsName : country
+        $.get('JsonCitiesServlet', {
+            country : country
         }, function(response) {
 
             var select = $('#city');

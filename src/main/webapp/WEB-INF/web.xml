@@ -21,7 +21,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>GetCitiesServlet</servlet-name>
-        <url-pattern>/JsonServlet/*</url-pattern>
+        <url-pattern>/JsonCitiesServlet</url-pattern>
     </servlet-mapping>
 
 </web-app>

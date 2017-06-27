@@ -11,8 +11,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class FormHandlerServlet extends HttpServlet {
 
     private static final String path = "/WEB-INF/views/Registration.jsp";
-    private static final String answer = "/WEB-INF/views/answer.jsp";
-
+    private static final String answer = "/WEB-INF/views/Answer.jsp";
 
     private final Map<String, User> cache = new ConcurrentHashMap<>();
 

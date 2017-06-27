@@ -2,10 +2,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>successful</title>
+    <title>result</title>
 </head>
 <body>
-    <h2>Answer: </h2>
-    <c:out value="${requestScope.serverAnswer}"/>
+<h2>Answer: </h2>
+<c:out value="${requestScope.serverAnswer}"/>
 </body>
 </html>
