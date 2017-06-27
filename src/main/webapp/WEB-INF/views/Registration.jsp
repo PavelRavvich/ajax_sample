@@ -19,30 +19,31 @@
 
 <h2>Registration</h2>
 
-    <form class="form-horizontal" role="form" id="commentForm" method="post" action="Servlet" name="add_data">
+    <form class="form-horizontal" role="form" id="commentForm"
+          method="post" action="Servlet" name="add_data">
 
         <div class="form-group">
         <label class="control-label" for="username">First Name</label><br />
-        <input type="text" name="username" id="username" />
+        <input class="form-control" type="text" name="username" id="username" />
         </div>
 
 
         <div class="form-group">
         <label class="control-label" for="login">Login</label><br />
-        <input type="text" name="login" id="login" />
+        <input class="form-control" type="text" name="login" id="login" />
         </div>
 
 
         <div class="form-group">
         <label class="control-label" for="password">Password</label><br />
-        <input type="text" name="password" id="password" />
+        <input class="form-control" type="text" name="password" id="password" />
         </div>
 
 
         <div class="selected">
             <p class="help-block">Select Country:</p>
             <label class="control-label" for="country"></label><br />
-            <select id="country" name="country">
+            <select class="form-control" id="country" name="country">
                 <option value="">Select Country</option>
                 <option value="USA">USA</option>
                 <option value="Israel">Israel</option>
@@ -53,7 +54,7 @@
         <div class="selected">
             <p class="help-block">Select City:</p>
             <label class="control-label" for="city"></label><br />
-            <select id="city" name="city">
+            <select  class="form-control" id="city" name="city">
                 <option value="">Select City</option>
             </select>
         </div>
@@ -66,5 +67,17 @@
         </div>
     </form>
 
+
+<div class="row">
+    <div class="col-xs-2">
+        <input type="text" class="form-control" placeholder=".col-xs-2">
+    </div>
+    <div class="col-xs-3">
+        <input type="text" class="form-control" placeholder=".col-xs-3">
+    </div>
+    <div class="col-xs-4">
+        <input type="text" class="form-control" placeholder=".col-xs-4">
+    </div>
+</div>
 </body>
 </html>
